@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "925015249624",
+    "firebase_url": "https://sunnah-a-day-888bb.firebaseio.com",
+    "project_id": "sunnah-a-day-888bb",
+    "storage_bucket": "sunnah-a-day-888bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:925015249624:android:d5f4a704894ea654",
+        "android_client_info": {
+          "package_name": "me.ashif.sunnahaday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "925015249624-25s4e4ib0qjg0k53tn7j37371t4icmtl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK1T3kEtNl3QeOjaSwW7_gfT0qIeRS9SI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

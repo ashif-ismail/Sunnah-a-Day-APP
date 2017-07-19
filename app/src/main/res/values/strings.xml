@@ -3,4 +3,8 @@
     <string name="title_home">Hello Ashif </string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="text_sunnah">Sunnah</string>
+    <string name="text_salath">Salath</string>
+    <string name="text_notifications">Notifications</string>
+    <string name="text_favourites">Favourites</string>
 </resources>

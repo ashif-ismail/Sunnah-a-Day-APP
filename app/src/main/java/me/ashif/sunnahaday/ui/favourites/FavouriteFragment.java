@@ -1,7 +1,5 @@
 package me.ashif.sunnahaday.ui.favourites;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,12 +15,12 @@ import me.ashif.sunnahaday.R;
  */
 public class FavouriteFragment extends Fragment {
 
-    public static FavouriteFragment newInstance(){
-        return new FavouriteFragment();
-    }
-
     public FavouriteFragment() {
         // Required empty public constructor
+    }
+
+    public static FavouriteFragment newInstance() {
+        return new FavouriteFragment();
     }
 
     @Override

@@ -9,27 +9,22 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import javax.inject.Inject;
+
 import me.ashif.sunnahaday.R;
 import me.ashif.sunnahaday.databinding.ActivityMainBinding;
 import me.ashif.sunnahaday.ui.favourites.FavouriteFragment;
 import me.ashif.sunnahaday.ui.notifications.NotificationFragment;
 import me.ashif.sunnahaday.ui.salath.SalathListFragment;
 import me.ashif.sunnahaday.ui.sunnah.SunnahListFragment;
+import me.ashif.sunnahaday.util.AppUtils;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding mBinding;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this,R.layout.activity_main);
-
-        mBinding.navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-//        AppUtils.showInitialFragment();
-    }
-
+    @Inject
+    private AppUtils mAppUtils;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -55,5 +50,15 @@ public class MainActivity extends AppCompatActivity {
             transaction.commit();
             return true;
         }};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
+        mBinding.navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        mAppUtils.showInitialFragment();
+    }
 
 }

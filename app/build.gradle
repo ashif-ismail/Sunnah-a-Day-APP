@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 
-project.ext{
+project.ext {
     dagger_version = "2.11"
     espresso_core = "2.2.2"
     appcompat = "26.0.0-beta2"
@@ -9,7 +9,7 @@ project.ext{
 }
 
 android {
-    dataBinding{
+    dataBinding {
         enabled true
     }
     compileSdkVersion 26
@@ -21,7 +21,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary= true
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -48,5 +48,6 @@ dependencies {
 
     annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_version"
     annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+    implementation 'com.android.support:support-v4:26.0.0-beta2'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Sunnah a Day</string>
-    <string name="title_home">Hello Ashif </string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="text_sunnah">Sunnah</string>
-    <string name="text_salath">Salath</string>
+    <string name="text_sunnah">Prophetic Sunnah</string>
+    <string name="text_salath">Salath un-Nabi</string>
     <string name="text_notifications">Notifications</string>
     <string name="text_favourites">Favourites</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

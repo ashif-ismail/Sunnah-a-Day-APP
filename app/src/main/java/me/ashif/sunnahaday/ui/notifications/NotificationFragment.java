@@ -1,7 +1,5 @@
 package me.ashif.sunnahaday.ui.notifications;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,18 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import me.ashif.sunnahaday.R;
+import me.ashif.sunnahaday.di.components.Injectable;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NotificationFragment extends Fragment {
-
-    public static NotificationFragment newInstance(){
-        return new NotificationFragment();
-    }
+public class NotificationFragment extends Fragment implements Injectable {
 
     public NotificationFragment() {
         // Required empty public constructor
+    }
+
+    public static NotificationFragment newInstance() {
+        return new NotificationFragment();
     }
 
     @Override

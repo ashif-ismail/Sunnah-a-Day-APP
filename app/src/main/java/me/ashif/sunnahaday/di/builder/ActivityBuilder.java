@@ -2,7 +2,6 @@ package me.ashif.sunnahaday.di.builder;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
-import me.ashif.sunnahaday.di.modules.MainActivityModule;
 import me.ashif.sunnahaday.ui.MainActivity;
 
 /**
@@ -14,6 +13,6 @@ import me.ashif.sunnahaday.ui.MainActivity;
 public abstract class ActivityBuilder {
     //all activities that are to be binded to
     // dagger should register here.
-    @ContributesAndroidInjector(modules = MainActivityModule.class)
+    @ContributesAndroidInjector(modules = FragmentBuilder.class)
     abstract MainActivity providesMainActivity();
 }

@@ -9,11 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import me.ashif.sunnahaday.R;
+import me.ashif.sunnahaday.di.components.Injectable;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FavouriteFragment extends Fragment {
+public class FavouriteFragment extends Fragment implements Injectable {
 
     public FavouriteFragment() {
         // Required empty public constructor

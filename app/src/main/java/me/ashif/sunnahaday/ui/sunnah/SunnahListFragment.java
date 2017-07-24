@@ -10,20 +10,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import me.ashif.sunnahaday.R;
+import me.ashif.sunnahaday.di.components.Injectable;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SunnahListFragment extends Fragment {
-
-    public static SunnahListFragment newInstance(){
-        return new SunnahListFragment();
-    }
+public class SunnahListFragment extends Fragment implements Injectable {
 
     public SunnahListFragment() {
         // Required empty public constructor
     }
 
+    public static SunnahListFragment newInstance() {
+        return new SunnahListFragment();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

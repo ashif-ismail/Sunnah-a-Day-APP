@@ -19,15 +19,6 @@ import me.ashif.sunnahaday.ui.sunnah.SunnahListFragment;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding mBinding;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-
-        mBinding.navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-    }
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -53,5 +44,14 @@ public class MainActivity extends AppCompatActivity {
             transaction.commit();
             return true;
         }};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
+        mBinding.navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        //ViewUtils.removeShiftMode(mBinding.navigation);
+    }
 
 }

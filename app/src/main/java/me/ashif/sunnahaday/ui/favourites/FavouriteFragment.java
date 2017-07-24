@@ -36,5 +36,4 @@ public class FavouriteFragment extends Fragment implements Injectable {
         super.onViewCreated(view, savedInstanceState);
         Log.d("tag", "onViewCreated: Fav Fragment");
     }
-
 }

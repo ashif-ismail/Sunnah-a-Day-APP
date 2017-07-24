@@ -1,13 +1,12 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="me.ashif.sunnahaday.ui.salath.SalathListFragment">
+<layout>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/text_salath" />
+        android:background="@android:color/background_light"
+        android:fitsSystemWindows="true">
 
-</FrameLayout>
+        <include layout="@layout/generic_collapsing_layout" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

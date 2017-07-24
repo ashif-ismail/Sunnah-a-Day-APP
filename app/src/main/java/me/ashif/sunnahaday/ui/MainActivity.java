@@ -9,6 +9,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import dagger.android.AndroidInjector;
+import dagger.android.DispatchingAndroidInjector;
+import dagger.android.support.HasSupportFragmentInjector;
 import me.ashif.sunnahaday.R;
 import me.ashif.sunnahaday.databinding.ActivityMainBinding;
 import me.ashif.sunnahaday.ui.favourites.FavouriteFragment;
@@ -16,9 +19,10 @@ import me.ashif.sunnahaday.ui.notifications.NotificationFragment;
 import me.ashif.sunnahaday.ui.salath.SalathListFragment;
 import me.ashif.sunnahaday.ui.sunnah.SunnahListFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements HasSupportFragmentInjector {
 
     private ActivityMainBinding mBinding;
+    private DispatchingAndroidInjector<Fragment> mFragmentDispatchingAndroidInjector;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -54,4 +58,8 @@ public class MainActivity extends AppCompatActivity {
         //ViewUtils.removeShiftMode(mBinding.navigation);
     }
 
+    @Override
+    public AndroidInjector<Fragment> supportFragmentInjector() {
+        return mFragmentDispatchingAndroidInjector;
+    }
 }
